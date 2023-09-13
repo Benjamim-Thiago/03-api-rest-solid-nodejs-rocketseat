@@ -1,11 +1,23 @@
 version: '3'
-
 services:
-  api-solid-pg:
-    image: bitnami/postgresql
+  nodeapp:
+    image: node:20
+    container_name: nodeapp
+    working_dir: /app
+    volumes:
+      - ./app:/app
     ports:
-      - 5432:5432
+      - "3000:3000"
+    tty: true
+    command: bash
+
+  postgres:
+    image: postgres:13
+    container_name: postgres
     environment:
-      - POSTGRESQL_USERNAME=docker
-      - POSTGRESQL_PASSWORD=docker
-      - POSTGRESQL_DATABASE=ignitenode03
+      POSTGRES_DB: apisolid
+      POSTGRES_USER: docker
+      POSTGRES_PASSWORD: docker
+    ports:
+      - "5432:5432"
+
