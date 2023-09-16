@@ -1,14 +1,14 @@
 version: '3'
 services:
   nodeapp:
-    image: node:20
+    image: benjamimthiago/my-node-20:0.0.1-release
     container_name: nodeapp
     working_dir: /app
     volumes:
       - ./app:/app
     ports:
       - "3000:3000"
-      - "51204:51204"
+      - "51204:8888"
     tty: true
     command: bash
 
