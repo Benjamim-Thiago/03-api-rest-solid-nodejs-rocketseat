@@ -9,6 +9,7 @@ services:
     ports:
       - "3000:3000"
       - "51204:8888"
+      - "5555:5555"
     tty: true
     command: bash
 
