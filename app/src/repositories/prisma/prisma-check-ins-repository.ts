@@ -4,6 +4,14 @@ import { CheckIn, Prisma } from '@prisma/client'
 import { CheckInsRepository } from '../check-ins-repository.interface'
 
 export class PrismaCheckInsRepository implements CheckInsRepository {
+  async findById(id: string) {
+    return await prisma.checkIn.findUnique({
+      where: {
+        id,
+      },
+    })
+  }
+
   async countByUserId(userId: string): Promise<number> {
     return await prisma.checkIn.count({
       where: {
@@ -39,6 +47,19 @@ export class PrismaCheckInsRepository implements CheckInsRepository {
   async create(data: Prisma.CheckInUncheckedCreateInput) {
     const checkIn = await prisma.checkIn.create({
       data,
+    })
+
+    return checkIn
+  }
+
+  async save({ id }: CheckIn) {
+    const checkIn = await prisma.checkIn.update({
+      where: {
+        id,
+      },
+      data: {
+        validated_at: new Date(),
+      },
     })
 
     return checkIn
