@@ -1,7 +1,8 @@
 version: '3'
 services:
   nodeapp:
-    image: benjamimthiago/my-node-20:0.0.1-release
+#    image: benjamimthiago/my-node-20:0.0.1-release
+    image: node:18
     container_name: nodeapp
     working_dir: /app
     volumes:
