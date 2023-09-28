@@ -15,9 +15,5 @@
 - ## Comando para iniciais para habilitar configurações Testes E2E
   - acesse a pasta prisma/vitest-environment-prisma
   - execute os comandos:
-    - cd prisma/vitest-environment-prisma
-    - npm link
-    - cd ..
-    - cd ..
-  - estando no diretorio raiz da aplicação, execute o seguinte comando:
+    - npm link ./prisma/vitest-environment-prisma
     - npm link vitest-environment-prisma
