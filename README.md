@@ -12,8 +12,8 @@
     - npm install
     - npx prisma migrate dev
     - npm run start:dev
-- ## Comando para iniciais para habilitar configurações Testes E2E
-  - acesse a pasta prisma/vitest-environment-prisma
-  - execute os comandos:
-    - npm link ./prisma/vitest-environment-prisma
-    - npm link vitest-environment-prisma
+- ## <strike>Comando para iniciais para habilitar configurações Testes E2E</strike>
+  - <strike>acesse a pasta prisma/vitest-environment-prisma</strike>
+  - <strike>execute os comandos:</strike>
+    - <strike>npm link ./prisma/vitest-environment-prisma</strike>
+    - <strike>npm link vitest-environment-prisma</strike>
