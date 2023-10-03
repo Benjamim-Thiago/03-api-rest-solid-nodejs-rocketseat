@@ -1,4 +1,4 @@
-app/node_modules
-app/build
-app/.env
-app/coverage
+node_modules
+build
+.env
+coverage
